@@ -77,6 +77,8 @@ namespace online_forum_backend
 
         }
 
+
+
         internal void insertComment(string text, string userName, int articleID)
         {
             //新增留言到該ID文章
@@ -103,5 +105,21 @@ namespace online_forum_backend
             }
             return empty;
         }
+
+        internal bool getArticle(int id)
+        {
+            if (id >= articles.Count)
+                return false;
+            foreach (Article article in articles)
+            {
+                if (article.articleID == id)
+                    article.content.ToString();
+            }
+
+            return true;
+
+        }
+  
+       
     }
 }
